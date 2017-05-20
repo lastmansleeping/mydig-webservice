@@ -1,0 +1,2 @@
+gitpython>=2.13
+slacker>=0.9.42
