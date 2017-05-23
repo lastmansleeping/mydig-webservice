@@ -16,6 +16,7 @@ def push(remote_obj):
 
 
 def commit(repo, files, commit_message=str(datetime.now())):
+    print repo.untracked_files
     repo.index.add(files)
     repo.index.commit(commit_message)
 
@@ -36,7 +37,7 @@ def execute_command(cmd):
     remote_obj = git.Remote(repo,'origin')
 
     url = remote_obj.url.split('@')[1]
-    auth_url = 'https://{}:{}@'.format(cmd['user_credentials']['username'], cmd['user_credentials']['oauth_token']) + url
+    auth_url = 'https://{}:{}@'.format(config['user_credentials']['username'], config['user_credentials']['access_token']) + url
 
     remote_obj.set_url(auth_url)
 

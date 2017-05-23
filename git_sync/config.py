@@ -6,8 +6,11 @@ config = {
     'slack': {
     	'slack_channel': 'git-sync',
 	    'slack_auth': {
-	        'token': 'xoxp-62576775760-80393638710-183736097520-191a94a6fa68d1fbe092e769ad4df46f'
+	        'token': '<Slack Auth Token>'
     },    
     },
-    'repo_directory': '/home/dhvanan/ISI/mydig-webinterface/Git-Syncing'
+    'repo_directory': '<Local Directory Path>',
+    'user_credentials' : {
+    	'username': 'usc-isi-i2',
+    	'access_token': '<Access Token>'}
 }
